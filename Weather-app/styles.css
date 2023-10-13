@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans';
+}
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    letter-spacing: 2.75px;
+}
+
+.tab-container{
+    width: 90%;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.weatherContainer{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+
+    margin-block: 4rem; 
+}
+
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #b5aee4;
+    padding: 10px 30px;
+    color: #505285;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container{
+    display: none;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container img{
+    height: 100px;
+    width: 70px;
+    margin-bottom: 1rem;
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+.grant-location-container.active{
+    display: flex;
+}
+
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+}
+
+.user-information-container.active{
+    display: flex;
+}
+
+.user-information-container{
+    display: none;
+}
+
+
+.name{
+    display: flex;
+    gap: 0 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.name p{
+    font-size: 2rem;
+}
+
+.user-information-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.user-information-container img{
+    width: 90px;
+    height: 90px;
+}
+
+.name img{
+    width: 30px;
+    height: 25px;
+}
+
+.user-information-container p[data-temp]{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.parameter{
+    background-color: #b5aee4;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    gap: 5px 0;
+    width: 150px;
+    max-height: 250px;
+    border-radius: 10px;
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.form-container.active{
+    display: flex;
+}
+
+.form-container input{
+    all: unset;
+    width: calc(100% - 100px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: #b5aee4;
+    border-radius: 5px;
+}
+
+.form-container input::placeholder{
+    color: #505285;
+    letter-spacing: 0.7px;
+}
+
+.form-container input:focus{
+    outline: 1.5px solid #505285;
+}
+
+.form-container .btn{
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.errorContainer{
+    display: none;
+}
+
+.errorContainer img{
+    height: 250px;
+    width: 250px;
+}
+
+.errorContainer p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.errorContainer.active{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+@media (width < 500px) {
+    .parameter-container{
+        flex-wrap: wrap;
+    }
+}
